@@ -16,7 +16,7 @@ def index():
         'message' : "Hello, stranger, from GitHub actions"
         }
 
-@app.post('/predict')
+@app.get('/predict')
 def predict_species(iris: IrisSpecies):
     data = iris.dict()
     prediction, probability = model.predict_species(
